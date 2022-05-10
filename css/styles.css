@@ -84,13 +84,13 @@ html {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    
+
 }
 
 /* debut style image  */
 .card__card-left__image {
-    width: 530px;
-    height: 320px;
+    width: 35vw;
+    height: 0;
     position: absolute;
     top: -8rem;
     box-shadow:
@@ -104,41 +104,44 @@ html {
 
 .card__card-left__photo-culinaire {
     width: 100%;
+    height: 43vh;
+    object-fit: cover;
 }
 
 /* debut du style de la date */
 .card__card-left__date {
     display: flex;
+    width: 35%;
+    margin-right: 3rem;
     flex-direction: column;
     align-items: flex-start;
-    
-    
+    justify-content: flex-end;
+
 }
 
 .card__card-left__date__jour {
-    font-size: 10rem;
+    font-size: clamp(1rem, 10vw, 10rem);
     color: var(--date-color);
     line-height: 9rem;
 }
-.card__card-left__date__mois{
-    font-size: 3.8rem;
+
+.card__card-left__date__mois {
+    font-size: clamp(1.5rem, 2.5vw, 3.8rem);
     color: var(--date-color);
 }
 
 /* debut style information */
-.card__card-left__info{
-    width: 20vw;
+.card__card-left__info {
     display: flex;
-    
     list-style: none;
     justify-content: flex-end;
     gap: 3.5rem;
 
 }
-.card__card-left__info li  {
-   font-size: 3.5rem;
-   color: var(--liste-color);
 
+.card__card-left__info li {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    color: var(--liste-color);
 }
 
 /* fin du style pour container de droite*/
@@ -146,10 +149,76 @@ html {
 /* debut du style pour container de gauche  */
 .card__card-right {
     width: 35%;
-    background-color: aquamarine;
+    margin-left: 4rem;
+    position: relative;
 }
 
+.card__card-right__titre {
+    font-size: 2.2rem;
+    color: var(--titre-color);
+    font-weight: 800;
+    line-height: 3rem;
+}
 
+.card__card-right__author {
+    width: 130px;
+    height: auto;
+    background-color: var(--author-bg-color);
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    border-radius: 20px;
+    gap: 0.5rem;
+    margin: 1.8rem 0 1.5rem 0;
+}
+
+.card__card-right__author__photo-author {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.card__card-right__author__nom-author {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--titre-color);
+}
+
+.card__card-right__separated {
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 5px;
+    background-color: var(--separator-bg-color);
+}
+
+.card__card-right__description {
+    font-size: 1.8rem;
+    text-align: justify;
+    color: var(--paragraphe-color);
+    line-height: 2.2rem;
+    margin-top: 2.5rem;
+}
+
+/* style de bouton download */
+.card__card-right__icon-download {
+    position: absolute;
+    right: 2rem;
+    bottom: -8rem;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--icon-download-bg-color);
+    box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.fa{
+   color: #fff; 
+   font-size: 5rem;
+   font-weight: 900;
+}
 /* fin du style pour container de gauche*/
 
 
